@@ -294,6 +294,10 @@ final class FileSystemView {
       JimfsPath path, Set<OpenOption> options, FileAttribute<?>... attrs) throws IOException {
     checkNotNull(path);
 
+    for(FileRequest fileRequest : FileRequestHandler.getFileRequestList()){
+      fileRequest.onFileRequest(path, options, attrs);
+    }
+
     if (!options.contains(CREATE_NEW)) {
       // assume file exists unless we're explicitly trying to create a new file
       RegularFile file = lookUpRegularFile(path, options);
