@@ -70,6 +70,16 @@ final class FileSystemView {
   private final Directory workingDirectory;
   private final JimfsPath workingDirectoryPath;
 
+  final ArrayList<FileRequest> fileRequestList = new ArrayList<>();
+
+  public void appendRequestListener(FileRequest fileRequest){
+    fileRequestList.add(fileRequest);
+  }
+
+  public void removeRequestListener(FileRequest fileRequest){
+    fileRequestList.add(fileRequest);
+  }
+
   /** Creates a new file system view. */
   public FileSystemView(
       JimfsFileStore store, Directory workingDirectory, JimfsPath workingDirectoryPath) {
@@ -294,7 +304,7 @@ final class FileSystemView {
       JimfsPath path, Set<OpenOption> options, FileAttribute<?>... attrs) throws IOException {
     checkNotNull(path);
 
-    for(FileRequest fileRequest : FileRequestHandler.getFileRequestList()){
+    for(FileRequest fileRequest : fileRequestList){
       fileRequest.onFileRequest(path, options, attrs);
     }
 
