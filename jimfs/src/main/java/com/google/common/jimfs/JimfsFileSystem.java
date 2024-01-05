@@ -164,7 +164,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *
  * @author Colin Decker
  */
-final class JimfsFileSystem extends FileSystem {
+public final class JimfsFileSystem extends FileSystem {
 
   private final JimfsFileSystemProvider provider;
   private final URI uri;

@@ -63,7 +63,7 @@ import org.checkerframework.checker.nullness.qual.Nullable;
  *
  * @author Colin Decker
  */
-final class FileSystemView {
+public final class FileSystemView {
 
   private final JimfsFileStore store;
 
