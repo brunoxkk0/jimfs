@@ -7,6 +7,7 @@ abstract file system APIs.
 
 [![Build Status](https://github.com/google/jimfs/workflows/CI/badge.svg?branch=master)](https://github.com/google/jimfs/actions)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.google.jimfs/jimfs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.google.jimfs/jimfs)
+[![](https://jitpack.io/v/brunoxkk0/jimfs.svg)](https://jitpack.io/#brunoxkk0/jimfs)
 
 Getting started
 ---------------
